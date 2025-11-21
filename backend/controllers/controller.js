@@ -11,9 +11,18 @@ exports.getclaim = (req, res) => {
       {
         label: "Authorized",
         amount: "$120.80",
-        date: "24 March 2022 - 10:24 PM",
+        date: "24 March 2022",
+        time: " 10:24 PM",
       },
-      { label: "Pending", amount: "$95.25", date: "24 March 2022 - 09:30 AM" },
+      {
+        label: "Pending",
+        amount: "$95.25",
+        date: "24 March 2022 ",
+        time: "09:30 AM",
+      },
+      {
+        actionButton: "Submit for payment",
+      },
     ],
   });
 };
