@@ -1,15 +1,12 @@
-import Navbar from "./components/Navbar";
-import Claim from "./pages/Claim";
-// import Action from "./components/Action";
-import StatusTable from "./components/StatusTable";
+import React from "react";
+import Navbar from "./components/Navbar.jsx";
+import Claim from "./pages/Claim.jsx";
 
 export default function App() {
   return (
     <div>
       <Navbar />
       <Claim />
-      {/* <Action /> */}
-      <StatusTable />
     </div>
   );
 }

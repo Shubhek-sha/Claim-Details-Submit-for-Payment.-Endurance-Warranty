@@ -14,9 +14,10 @@
 //     </div>
 //   );
 // }
+"use client";
 import { Button, Card } from "@mantine/core";
 
-export default function StatusTable({ statuses = [] }) {
+export default function StatusTable({ statuses = [], onOpenSubmit }) {
   return (
     <div className="w-full max-w-3xl mx-auto mt-10">
       <Card
@@ -36,7 +37,7 @@ export default function StatusTable({ statuses = [] }) {
             key={i}
             className="grid grid-cols-3 items-center py-3 border-b last:border-none"
           >
-            {/* STATUS COLUMN */}
+            {/* STATUS */}
             <div className="flex items-center gap-2">
               {s.label ? (
                 <>
@@ -56,7 +57,7 @@ export default function StatusTable({ statuses = [] }) {
               )}
             </div>
 
-            {/* DETAILS COLUMN */}
+            {/* DETAILS */}
             <div className="text-gray-700">
               {s.amount ? (
                 <>
@@ -71,10 +72,16 @@ export default function StatusTable({ statuses = [] }) {
               )}
             </div>
 
-            {/* ACTION COLUMN */}
+            {/* ACTION */}
             <div className="text-right">
               {s.actionButton ? (
-                <Button variant="filled" color="dark" radius="xl" size="xs">
+                <Button
+                  onClick={onOpenSubmit}
+                  variant="filled"
+                  color="dark"
+                  radius="xl"
+                  size="xs"
+                >
                   {s.actionButton}
                 </Button>
               ) : (
